@@ -29,3 +29,15 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+
+.logo {
+  margin: 0 auto;
+  width : 75%;
+}
+.buttons{
+  text-align:center;
+}
+ion-button {
+  width:50%;
+  margin: 10px auto;
+}

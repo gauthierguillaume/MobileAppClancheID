@@ -3,6 +3,9 @@
 
 /** Ionic CSS Variables **/
 :root {
+  --ion-background-color: #223646;
+  --ion-text-color: #f4f5f8;
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -10,6 +13,14 @@
   --ion-color-primary-contrast-rgb: 255, 255, 255;
   --ion-color-primary-shade: #3171e0;
   --ion-color-primary-tint: #4c8dff;
+
+  /** fuschia **/
+  --ion-color-fuschia: #C4227D;
+  --ion-color-fuschia-rgb: 196, 34, 125;
+  --ion-color-fuschia-contrast: #ffffff;
+  --ion-color-fuschia-contrast-rgb: 255, 255, 255;
+  --ion-color-fuschia-shade: #9C1B64;
+  --ion-color-fuschia-tint: #db7ab1;
 
   /** secondary **/
   --ion-color-secondary: #3dc2ff;
@@ -226,4 +237,13 @@
   ion-title.title-large {
     --color: white;
   }
+}
+
+.ion-color-fuschia {
+  --ion-color-base: var(--ion-color-fuschia);
+  --ion-color-base-rgb: var(--ion-color-fuschia-rgb);
+  --ion-color-contrast: var(--ion-color-fuschia-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-fuschia-contrast-rgb);
+  --ion-color-shade: var(--ion-color-fuschia-shade);
+  --ion-color-tint: var(--ion-color-fuschia-tint);
 }
