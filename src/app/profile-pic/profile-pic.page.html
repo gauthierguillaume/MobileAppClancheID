@@ -1,9 +1,42 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>profilePic</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="fuschia" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-chip color="beige" routerLink="/" class="ion-float-right ion-margin-end">
+      <ion-icon color="beige" name="log-out-outline"></ion-icon>
+      <ion-text style="font-size:.5em;" color="beige">DÉCONNEXION</ion-text>
+    </ion-chip>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item class="profile-pic-item">
+    <ion-img class="profile-pic" src="../assets/img/leo.png"></ion-img>
+  </ion-item>
+
+  <div class="container ion-text-center">
+    <ion-button class="pic-button justify-content-left" color="beige">
+      <ion-icon slot="start" name="download" color="fuschia"></ion-icon>
+      <ion-text color="fuschia"> Ajouter depuis cet appareil</ion-text>
+    </ion-button>
+
+    <ion-button class="pic-button" color="beige">
+      <ion-icon slot="start" name="camera" color="fuschia"></ion-icon>
+      <ion-text color="fuschia"> Prendre une nouvelle photo</ion-text>
+    </ion-button>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col width="6">
+            <ion-button class="bot-button" routerLink="/profile" color="fuschia">Retour</ion-button>
+        </ion-col>
+        <ion-col width="6">
+            <ion-button class="bot-button" routerLink="/profile" color="fuschia">Confirmer</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
 
 </ion-content>
