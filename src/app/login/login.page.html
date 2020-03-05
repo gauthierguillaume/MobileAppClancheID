@@ -1,4 +1,30 @@
-<ion-content>
-  
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="fuschia" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <div class="small">
+      <ion-img src="../assets/img/carine.svg"></ion-img>
+    </div>
+  </ion-toolbar>
+</ion-header>
 
+<ion-content>
+  <div class="loginForm form">
+    <ion-item>
+      <ion-label position="stacked">Adresse Email</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Mot de passe</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <div class="buttons">
+      <ion-button color="fuschia"> CONNEXION </ion-button>
+    </div>
+
+    <div class="centered">
+      <ion-text class="smallText">Pas encore de compte ? Créez en un <a routerLink="/signup">Ici </a></ion-text>
+    </div>
+  </div>
 </ion-content>

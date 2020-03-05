@@ -1,9 +1,70 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>signup</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="fuschia" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <div class="small">      
+      <ion-img src="../assets/img/carine.svg"></ion-img>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="form">
+    <ion-item>
+      <ion-label position="stacked">Adresse Email</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Pseudo</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col width="6">
+          <ion-item>
+            <ion-label position="stacked">Nom</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col width="6">
+          <ion-item>
+            <ion-label position="stacked">Prénom</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Verify Password</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">N° de Téléphone</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
 
+    <ion-button routerLink="/sign-up-pic" color="fuschia" class="round">
+      <ion-icon name="camera-outline"></ion-icon>
+    </ion-button>
+    <div class="sign-up-pic"></div>
+  </div>
+
+
+    <ion-item class="smallText" style="text-align: center;">
+      <ion-checkbox color="fuschia"></ion-checkbox>
+      <ion-label>Je confirme avoir lu et accepté les <a routerLink="/CGU">CGU</a></ion-label>
+    </ion-item>
+
+    <div class="buttons">
+      <ion-button color="fuschia"> INSCRIPTION </ion-button>
+    </div>
+
+    <div class="centered">
+      <ion-text class="smallText">Déjà un compte ? Connectez vous <a routerLink="/login">Ici </a></ion-text>
+    </div>
 </ion-content>
