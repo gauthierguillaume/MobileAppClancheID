@@ -21,10 +21,20 @@
       <ion-text color="fuschia"> Ajouter depuis cet appareil</ion-text>
     </ion-button>
 
-    <ion-button class="pic-button" color="beige">
+    <ion-button class="pic-button" color="beige" (click)="photoService.addNewToGallery()">
       <ion-icon slot="start" name="camera" color="fuschia"></ion-icon>
       <ion-text color="fuschia"> Prendre une nouvelle photo</ion-text>
     </ion-button>
+
+    <!-- GALLERY -->
+    <ion-grid>
+      <ion-row>
+      <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
+        <ion-img src="{{ photo.base64 ? photo.base64 : photo.webviewPath }}" (click)="showActionSheet(photo, position)"></ion-img>
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+  
 
     <ion-grid>
       <ion-row>
