@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="fuschia" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+      <ion-chip color="beige" routerLink="/" class="ion-float-right ion-margin-end">
+        <ion-icon color="beige" name="log-out-outline"></ion-icon>
+        <ion-text style="font-size:.5em;" color="beige">DÉCONNEXION</ion-text>
+      </ion-chip>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-item class="profile-pic-item">
+    <ion-img class="profile-pic" src="../assets/img/leo.png"></ion-img>
+    <ion-fab vertical="bottom" horizontal="end">
+      <ion-fab-button color="fuschia" routerLink="/profile-pic">
+        <ion-icon name="camera"></ion-icon>
+      </ion-fab-button>
+      </ion-fab>
+  </ion-item>
+
+  <ion-item class="edit-sound-item">
+    <ion-grid>
+      <ion-row>
+        <div class="edit-sound">
+          <ion-text routerLink="/#" color="beige">Modifier le fichier sonore</ion-text>
+        </div>
+      </ion-row>
+      <ion-row>
+        <div class="ion-text-center mp3-holder">
+          <ion-text class="centered-text" color="fuschia">machin.mp3</ion-text>
+          <ion-button class="ion-float-right edit-sound-button" color="fuschia" shape="round"><ion-icon color="beige" name="download"></ion-icon></ion-button>
+        </div>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+    <ion-grid>
+      <ion-row>
+        <ion-button (click)="displayImage()" class="qr-code-button" color="fuschia">QR Code</ion-button>
+      </ion-row>
+      <ion-row>
+        <div class="square" id="square">
+          <img style="border-radius: 10px;" (click)="expand()" id="qr-code" style="display:none;" src="../assets/img/qrcode.png" />
+        </div>
+      </ion-row>
+    </ion-grid>
+
+
+</ion-content>

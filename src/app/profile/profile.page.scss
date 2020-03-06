@@ -1,0 +1,41 @@
+.profile-pic {
+    margin : 3% auto;
+    width:50%;
+    border-radius: 50% !important;
+    overflow: hidden;
+    border: 3px solid #C4227d;
+    }
+
+.mp3-holder{
+    margin : 5% auto;
+    background-color: #F0ECE2;
+    width: 90%;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    }
+
+.edit-sound{
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.centered-text {
+    line-height:35px;
+}
+
+.square {
+    margin:5% auto;
+    width: 36%;
+    border-radius: 20px;
+    z-index:9999;
+  }
+.square img{
+    border-radius: 5px;
+}
+
+.qr-code-button{
+    margin : 0 auto ;
+    color:#c4227d;
+    width : 80%;
+}
