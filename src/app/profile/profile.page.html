@@ -37,16 +37,16 @@
     </ion-grid>
   </ion-item>
 
-  <ion-item>
     <ion-grid>
       <ion-row>
-        <div class="square"></div>
+        <ion-button (click)="displayImage()" class="qr-code-button" color="fuschia">QR Code</ion-button>
       </ion-row>
       <ion-row>
-        <ion-button class="qr-code-button" color="fuschia">Générer un QR Code</ion-button>
+        <div class="square" id="square">
+          <img style="border-radius: 10px;" (click)="expand()" id="qr-code" style="display:none;" src="../assets/img/qrcode.png" />
+        </div>
       </ion-row>
     </ion-grid>
-  </ion-item>
 
 
 </ion-content>

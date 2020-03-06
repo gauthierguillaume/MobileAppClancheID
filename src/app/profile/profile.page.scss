@@ -1,5 +1,5 @@
 .profile-pic {
-    margin : 10% auto;
+    margin : 3% auto;
     width:50%;
     border-radius: 50% !important;
     overflow: hidden;
@@ -9,7 +9,7 @@
 .mp3-holder{
     margin : 5% auto;
     background-color: #F0ECE2;
-    width: 80%;
+    width: 90%;
     border-radius: 5px;
     text-align: center;
     position: relative;
@@ -26,16 +26,16 @@
 
 .square {
     margin:5% auto;
-    position: relative;
-    width: 40%;
+    width: 36%;
+    border-radius: 20px;
+    z-index:9999;
   }
-  
-.square:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
+.square img{
+    border-radius: 5px;
 }
+
 .qr-code-button{
-    margin : 0 auto;
+    margin : 0 auto ;
     color:#c4227d;
+    width : 80%;
 }
