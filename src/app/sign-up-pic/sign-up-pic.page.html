@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button color="fuschia" defaultHref="home"></ion-back-button>
     </ion-buttons>
-    <div class="small">      
+    <div class="small">
       <ion-img src="../assets/img/carine.svg"></ion-img>
     </div>
   </ion-toolbar>
@@ -13,14 +13,18 @@
 <ion-content>
   <div class="container">
 
-    <div class="title"><ion-text><h2>Aperçu</h2></ion-text></div>
+    <div class="title">
+      <ion-text>
+        <h2>Aperçu</h2>
+      </ion-text>
+    </div>
     <ion-grid>
       <ion-row>
         <ion-col width="6">
-            <ion-img class="picture green" src="../assets/img/arthur.jpg"></ion-img>
+          <ion-img class="picture green" src="../assets/img/arthur.jpg"></ion-img>
         </ion-col>
         <ion-col width="6">
-            <ion-img class="picture" src="../assets/img/niko.png"></ion-img>
+          <ion-img class="picture" src="../assets/img/niko.png"></ion-img>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -34,19 +38,22 @@
     </div>
 
     <div class="pic-buttons">
-      <ion-button class="button justify-content-left" color="beige">
-        <ion-icon slot="start" name="download" color="fuschia"></ion-icon>
-        <ion-text color="fuschia"> Ajouter depuis cet appareil</ion-text>
-      </ion-button>
-
-      <ion-button class="button" color="beige">
+      <ion-button class="button" color="beige" (click)="photoService.removeAllPicture(); photoService.addNewToGallery()">
         <ion-icon slot="start" name="camera" color="fuschia"></ion-icon>
         <ion-text color="fuschia"> Prendre une nouvelle photo</ion-text>
       </ion-button>
     </div>
 
+    <!-- GALLERY -->
+    <ion-grid>
+        <ion-col *ngFor="let photo of photoService.photos; index as position">
+          <ion-img class="profile-pic" src="{{ photo.base64 ? photo.base64 : photo.webviewPath }}"
+            (click)="showActionSheet(photo, position)"></ion-img>
+        </ion-col>
+    </ion-grid>
+
     <div class="confirm-button">
-      <ion-button color="fuschia">Confirmer</ion-button>  
+      <ion-button color="fuschia" (click)="photoService.moveAllPicture()">Confirmer</ion-button>
     </div>
 
   </div>

@@ -9,6 +9,7 @@ const { Camera, Filesystem, Storage } = Plugins;
 })
 export class PhotoService {
   public photos: Photo[] = [];
+  public savedPhotos = [];
   private PHOTO_STORAGE: string = "photos";
   private platform: Platform;
 
@@ -20,6 +21,9 @@ export class PhotoService {
     // Retrieve cached photo array data
     const photos = await Storage.get({ key: this.PHOTO_STORAGE });
     this.photos = JSON.parse(photos.value) || [];
+
+    const savedPhotos = await Storage.get({ key: this.PHOTO_STORAGE });
+    this.savedPhotos = JSON.parse(savedPhotos.value) || [];
 
     // If running on the web...
     if (!this.platform.is('hybrid')) {
@@ -138,6 +142,21 @@ export class PhotoService {
     }
   }
 
+  // Move all picture from photo array to savedPhoto array
+  public moveAllPicture() {
+    this.savedPhotos = this.photos
+  }
+
+  // Delete all pictures from savedPhotos array
+  public removeAllSavedPictures() {
+    this.savedPhotos = [];
+  }
+
+  // Delete all pictures from photo array
+  public removeAllPicture() {
+    this.photos = [];
+  }
+
   // Delete picture by removing it from reference data and the filesystem
   public async deletePicture(photo: Photo, position: number) {
     // Remove this photo from the Photos reference data array
@@ -171,4 +190,5 @@ interface Photo {
   filepath: string;
   webviewPath: string;
   base64?: string;
-}
+} 
+
