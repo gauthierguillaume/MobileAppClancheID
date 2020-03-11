@@ -1,11 +1,10 @@
 .profile-pic {
     margin : 10% auto;
-    width:50%;
-    border-radius: 50% !important;
+    width: 80%;
+    border-radius: 10% !important;
     overflow: hidden;
     border: 3px solid #C4227d;
     }
-
         
 .pic-button {
     margin-top: 10%;
@@ -18,3 +17,8 @@
     font-size:.65em;
     width:100%;
 }
+
+// action-sheet-title sc-ion-action-sheet-md{
+//     --background: white;
+//     --color: white;
+// }
