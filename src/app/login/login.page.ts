@@ -43,9 +43,8 @@ export class LoginPage implements OnInit {
         if (this.validateInputs()) {
             this.authService.login(this.postData).subscribe((res: any) => {
                     if (res.userData) {
-// Storing the User data.
                         this.storageService.store(AuthConstants.AUTH, res.userData);
-                        this.router.navigate(['home/profile']);
+                        this.router.navigate(['/profile-pic']);
                     } else {
                         this.toastService.presentToast('Incorrect username and password.');
                     }
