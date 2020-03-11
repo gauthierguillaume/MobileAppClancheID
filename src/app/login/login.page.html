@@ -13,14 +13,14 @@
   <div class="loginForm form">
     <ion-item>
       <ion-label position="stacked">Adresse Email</ion-label>
-      <ion-input></ion-input>
+      <ion-input name="user" type="text" [(ngModel)]="postData.email"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="stacked">Mot de passe</ion-label>
-      <ion-input></ion-input>
+      <ion-input autocomplete="off" name="password" type="password" [(ngModel)]="postData.password"></ion-input>
     </ion-item>
     <div class="buttons">
-      <ion-button routerLink="/profile" color="fuschia"> CONNEXION </ion-button>
+      <ion-button (click)="loginAction()" color="fuschia"> CONNEXION </ion-button>
     </div>
 
     <div class="centered">
